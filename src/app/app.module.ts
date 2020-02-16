@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { CSSLoaderService } from './css-loader.service';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     FormsModule,
     MatSlideToggleModule,
   ],
-  providers: [],
+  providers: [CSSLoaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

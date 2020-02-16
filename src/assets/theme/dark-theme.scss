@@ -1,0 +1,79 @@
+$primary:        #9147ff    !default;
+$secondary:      #a263ff    !default;
+
+@import "~bootstrap/scss/bootstrap.scss";
+
+// for material
+@import '~@angular/material/theming';
+@include mat-core();
+
+$md-color-primary: (
+  50 : #f2e9ff,
+  100 : #dec8ff,
+  200 : #c8a3ff,
+  300 : #b27eff,
+  400 : #a263ff,
+  500 : #9147ff,
+  600 : #8940ff,
+  700 : #7e37ff,
+  800 : #742fff,
+  900 : #6220ff,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #dccfff,
+  A700 : #c9b6ff,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+    )
+);
+$md-primary: mat-palette($md-color-primary);
+
+$md-color-secondary: (
+  50 : #f4ecff,
+  100 : #e3d0ff,
+  200 : #d1b1ff,
+  300 : #be92ff,
+  400 : #b07aff,
+  500 : #a263ff,
+  600 : #9a5bff,
+  700 : #9051ff,
+  800 : #8647ff,
+  900 : #7535ff,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #e9dfff,
+  A700 : #d7c6ff,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+    )
+);
+
+$md-secondary: mat-palette($md-color-secondary, 800);
+$md-theme: mat-dark-theme($md-primary, $md-secondary);
+@include angular-material-theme($md-theme);

@@ -23,13 +23,23 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": false,
+            "extractCss": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/theme/default-theme.scss"
+              {
+                "input": "src/assets/theme/default-theme.scss",
+                "bundleName": "default-theme",
+                "inject": false
+              },
+              {
+                "input": "src/assets/theme/dark-theme.scss",
+                "bundleName": "dark-theme",
+                "inject": false
+              }
             ],
             "scripts": []
           },
@@ -42,7 +52,7 @@
                 }
               ],
               "optimization": true,
-              "outputHashing": "all",
+              "outputHashing": "bundles",
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
